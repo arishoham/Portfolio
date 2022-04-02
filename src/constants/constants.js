@@ -33,7 +33,7 @@ export const projects = [
     title: 'NutritionIX',
     description:
       'Health app for monitoring nutrition intake by meal with interactive charts.',
-    image: '/images/eb.jpg',
+    image: '/images/nutritionix.png',
     tags: ['Linux', 'C', 'Makefile', 'Bash'],
     source: 'https://github.com/lordarcadius/electrablue_mido',
     visit:
