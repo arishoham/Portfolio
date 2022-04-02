@@ -49,15 +49,15 @@ export default class MyDocument extends Document {
             content="Ari Shoham | Fullstack Software Engineer"
           />
           <meta property="og:description" content={desc} />
-          <meta property="og:image" content="/images/banner.png" />
+          <meta property="og:image" content="/banner.png" />
           <meta property="twitter:card" content="summary_large_image" />
           <meta
             property="twitter:title"
             content="Ari Shoham | Fullstack Software Engineer"
           />
           <meta property="twitter:description" content={desc} />
-          <meta property="twitter:image" content="/images/banner.png" />
-          <link rel="shortcut icon" href="/images/favicon.ico" />
+          <meta property="twitter:image" content="/banner.png" />
+          <link rel="shortcut icon" href="/favicon.ico" />
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-KPHFKW01P6"
