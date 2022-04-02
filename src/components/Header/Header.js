@@ -1,10 +1,9 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import {
   AiFillGithub,
   AiFillInstagram,
   AiFillLinkedin,
-  AiFillTwitterCircle,
   AiOutlineMore,
 } from 'react-icons/ai';
 import {
@@ -20,6 +19,18 @@ import NavDropDown from '../NavDropDown';
 
 const Header = () => {
   const [isOpen, setisOpen] = useState(false);
+  const wrapperRef = useRef(null);
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+        setisOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [wrapperRef]);
   return (
     <Container>
       <Div1>
@@ -69,7 +80,7 @@ const Header = () => {
           <AiOutlineMore size="3rem" />
         </SocialIcons>
       </Div3>
-      <NavDropDown isOpen={isOpen} />
+      <NavDropDown ref={wrapperRef} isOpen={isOpen} />
     </Container>
   );
 };

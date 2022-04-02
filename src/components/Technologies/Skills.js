@@ -1,4 +1,4 @@
-import { SiFirebase, SiGit, SiReact, SiPostgresql } from 'react-icons/si';
+import { SiJest, SiGit, SiReact, SiPostgresql } from 'react-icons/si';
 import { SiTypescript } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
 
@@ -34,11 +34,11 @@ export const Skills = [
     ),
   },
   {
-    slug: 'firebase',
-    Component: SiFirebase,
-    title: 'Firebase',
+    slug: 'jest',
+    Component: SiJest,
+    title: 'Jest',
     Description: () => (
-      <>I have used Firebase for auth, database & storage in my apps.</>
+      <>Testing is a priority in all of my projects.</>
     ),
   },
   {
