@@ -68,7 +68,9 @@ const Header = () => {
         </li>
       </Div2>
       <Div3>
-        <SocialIcons href="https://github.com/arishoham">
+        <SocialIcons
+          href="https://github.com/arishoham"
+        >
           <AiFillGithub size="3rem" />
         </SocialIcons>
         <SocialIcons href="https://www.linkedin.com/in/ari-shoham/">
@@ -77,7 +79,7 @@ const Header = () => {
         <SocialIcons href="https://www.instagram.com/arishoham">
           <AiFillInstagram size="3rem" />
         </SocialIcons>
-        {/* <SocialIcons href="https://www.twitter.com/arishoham">
+        {/* <SocialIcons >
           <AiFillTwitterCircle size="3rem" />
         </SocialIcons> */}
         <SocialIcons onClick={(e) => setisOpen((cur) => !cur)}>

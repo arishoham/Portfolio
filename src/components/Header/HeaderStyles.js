@@ -1,5 +1,6 @@
 import { IoIosArrowDropdown } from 'react-icons/io';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Container = styled.div`
   position: relative;
@@ -110,18 +111,36 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
   }
 `;
 
+// Social Icons
 
-// Social Icons 
-
-export const SocialIcons = styled.a`
-transition: 0.3s ease;
-color: white;
-border-radius: 50px;
+const SocialIconsStyled = styled(motion.a)`
+  transition: 0.3s ease;
+  color: white;
+  border-radius: 50px;
   padding: 8px;
-&:hover {
-    background-color: #212d45;
-    transform: scale(1.2);
-    cursor: pointer;
-    
+
+  &:hover {
+  background-color: #212d45;
+  /* transform: scale(1.2); */
+  cursor: pointer;
   }
-`
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    &:hover {
+      transform: none;
+    }
+  }
+`;
+
+export const SocialIcons = (props) => {
+  return (
+    <SocialIconsStyled
+      whileTap={{ scale: 0.9 }}
+      whileHover={{ scale: 1.2 }}
+      transition={{ type: 'spring', duration: 0.07 }}
+      {...props}
+    >
+      {props.children}
+    </SocialIconsStyled>
+  );
+};
