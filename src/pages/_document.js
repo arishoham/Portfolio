@@ -62,14 +62,18 @@ export default class MyDocument extends Document {
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-KPHFKW01P6"
           />
-          <script dangerouslySetInnerHTML={{
-            __html:`
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-KPHFKW01P6');
-            `
-          }} />
+            gtag('config', 'G-KPHFKW01P6', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
         </Head>
         <body>
           <Main />
