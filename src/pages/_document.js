@@ -1,5 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
-// import Script from 'next/script'
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
@@ -58,22 +57,6 @@ export default class MyDocument extends Document {
           <meta property="twitter:description" content={desc} />
           <meta property="twitter:image" content="/banner.png" />
           <link rel="shortcut icon" href="/favicon.ico" />
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-KPHFKW01P6"
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-KPHFKW01P6', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-          />
         </Head>
         <body>
           <Main />

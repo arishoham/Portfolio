@@ -4,7 +4,7 @@ export const projects = [
     description:
       'A Nextjs developer tool that measures key web metrics of your site with every commit, to optimize performance.',
     image: '/images/vantage.png',
-    tags: ['Nextjs', 'Redux', 'MaterialUI', 'Google Lighthouse'],
+    tags: ['Nextjs', 'Redux', 'Nextjs', 'Google Lighthouse'],
     source: 'https://github.com/oslabs-beta/Vantage',
     visit: 'https://www.vantagenext.com',
     id: 0,
