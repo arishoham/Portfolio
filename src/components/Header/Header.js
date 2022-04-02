@@ -21,9 +21,13 @@ const Header = () => {
   const [isOpen, setisOpen] = useState(false);
   const wrapperRef = useRef(null);
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-        setisOpen(false)
+    function handleClickOutside(e) {
+      if (
+        wrapperRef.current &&
+        e.target.id !== 'more-menu' &&
+        !wrapperRef.current.contains(e.target)
+      ) {
+        setisOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -76,8 +80,8 @@ const Header = () => {
         {/* <SocialIcons href="https://www.twitter.com/arishoham">
           <AiFillTwitterCircle size="3rem" />
         </SocialIcons> */}
-        <SocialIcons onClick={() => setisOpen(!isOpen)}>
-          <AiOutlineMore size="3rem" />
+        <SocialIcons onClick={(e) => setisOpen((cur) => !cur)}>
+          <AiOutlineMore size="3rem" id="more-menu" />
         </SocialIcons>
       </Div3>
       <NavDropDown ref={wrapperRef} isOpen={isOpen} />
