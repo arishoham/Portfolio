@@ -30,14 +30,13 @@ export const projects = [
     id: 2,
   },
   {
-    title: 'NutritionIX',
+    title: 'Nutrition.IX',
     description:
       'Health app for monitoring nutrition intake by meal with interactive charts.',
     image: '/images/nutritionix.png',
-    tags: ['Linux', 'C', 'Makefile', 'Bash'],
-    source: 'https://github.com/lordarcadius/electrablue_mido',
-    visit:
-      'https://forum.xda-developers.com/t/kernel-mido-oreo-pie-electrablue-kernel-21-0-july-06-redmi-note-4.3655651/',
+    tags: ['React', 'Redux', 'MongoDB', 'OAuth'],
+    source: 'https://github.com/Nutrition-IX/NutritionIX',
+    // visit:
     id: 3,
   },
 ];
