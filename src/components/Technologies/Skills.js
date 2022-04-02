@@ -1,42 +1,52 @@
-import { DiAndroid, DiTerminal } from "react-icons/di";
-import { SiJava, SiFirebase, SiGit } from "react-icons/si";
-import { RiFlutterFill } from "react-icons/ri";
+import { SiFirebase, SiGit, SiReact, SiPostgresql } from 'react-icons/si';
+import { SiTypescript } from 'react-icons/si';
+import { FaNodeJs } from 'react-icons/fa';
 
 export const Skills = [
   {
-    slug: "android",
-    Component: DiAndroid,
-    title: "Android",
-    Description: () => <>I work on ROMs, Kernels & Android Apps using Java.</>,
+    slug: 'react',
+    Component: SiReact,
+    title: 'React',
+    Description: () => <>I build responsive, fluid UIs using React.</>,
   },
   {
-    slug: "flutter",
-    Component: RiFlutterFill,
-    title: "Flutter",
-    Description: () => <>Currently working with Dart & Flutter for app development. </>,
+    slug: 'node',
+    Component: FaNodeJs,
+    title: 'Node',
+    Description: () => (
+      <>Node and Express are my preferred method of building backends.</>
+    ),
   },
   {
-    slug: "java",
-    Component: SiJava,
-    title: "Java",
-    Description: () => <>I can code in Java. But I mainly use it for Android app development.</>,
+    slug: 'typescript',
+    Component: SiTypescript,
+    title: 'Typescript',
+    Description: () => (
+      <>I prefer Typescript to catch bugs early and IDE support.</>
+    ),
   },
   {
-    slug: "terminal",
-    Component: DiTerminal,
-    title: "Scripting",
-    Description: () => <>I have written dozens of Shell scripts for various purposes.</>,
+    slug: 'postgresql',
+    Component: SiPostgresql,
+    title: 'PostgreSQL',
+    Description: () => (
+      <>I typically use relational databases in my projects.</>
+    ),
   },
   {
-    slug: "firebase",
+    slug: 'firebase',
     Component: SiFirebase,
-    title: "Firebase",
-    Description: () => <>I have used Firebase for auth, database & analytics in my apps.</>,
+    title: 'Firebase',
+    Description: () => (
+      <>I have used Firebase for auth, database & storage in my apps.</>
+    ),
   },
   {
-    slug: "git",
+    slug: 'git',
     Component: SiGit,
-    title: "Git",
-    Description: () => <>Git is a tool that I use every day. I use GitHub for pushing my code.</>,
+    title: 'Git',
+    Description: () => (
+      <>Git is a tool I rely on everyday to manage my workflow.</>
+    ),
   },
 ];

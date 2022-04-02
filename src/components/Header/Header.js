@@ -8,7 +8,7 @@ const Header = () => (
     <Div1>
       <Link href="/">
         <a style={{ display: 'flex', alignItems: 'center', color: "white" }}>
-          <img src="/logo.svg" height={40} width={40} /> <span style={{ marginLeft: 10, marginTop: 7, fontSize: 20 }} >Vipul Jha</span>
+          <img src="/logo.png" height={40} width={40} /> <span style={{ marginLeft: 10, marginTop: 7, fontSize: 20 }} >Ari Shoham</span>
         </a>
       </Link>
     </Div1>
@@ -29,22 +29,22 @@ const Header = () => (
         </Link>
       </li>
       <li>
-        <a href="https://blog.vipuljha.com">
-          <NavLink>Blog</NavLink>
+        <a href="">
+          <NavLink>Experience</NavLink>
         </a>
       </li>
     </Div2>
     <Div3>
-      <SocialIcons href="https://github.com/lordarcadius">
+      <SocialIcons href="https://github.com/arishoham">
         <AiFillGithub size="3rem" />
       </SocialIcons>
-      <SocialIcons href="https://www.linkedin.com/in/lordarcadius/">
+      <SocialIcons href="https://www.linkedin.com/in/ari-shoham/">
         <AiFillLinkedin size="3rem" />
       </SocialIcons>
-      <SocialIcons href="https://www.instagram.com/lordarcadius">
+      <SocialIcons href="https://www.instagram.com/arishoham">
         <AiFillInstagram size="3rem" />
       </SocialIcons>
-      <SocialIcons href="https://www.twitter.com/lordarcadius">
+      <SocialIcons href="https://www.twitter.com/arishoham">
         <AiFillTwitterCircle size="3rem" />
       </SocialIcons>
     </Div3>

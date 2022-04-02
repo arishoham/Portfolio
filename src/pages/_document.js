@@ -37,11 +37,12 @@ export default class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Vipul Jha - Android & Flutter Dev" />
           <meta property="og:description" content="Hey there, This is Vipul Jha aka lordarcadius. I am an Android & Flutter developer who also works on ROMs, Kernels, & Scripts." />
-          <meta property="og:image" content="https://www.vipuljha.com/images/banner.png" />
+          <meta property="og:image" content="https://www.arishoham.com/images/banner.png" />
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:title" content="Vipul Jha - Android & Flutter Dev" />
           <meta property="twitter:description" content="Hey there, This is Vipul Jha aka lordarcadius. I am an Android & Flutter developer who also works on ROMs, Kernels, & Scripts." />
-          <meta property="twitter:image" content="https://www.vipuljha.com/images/banner.png" />
+          <meta property="twitter:image" content="https://www.arishoham.com/images/banner.png" />
+          <link rel="icon" type="image/png" href="http://www.arishoham.com/images/logo.png" />
         </Head>
         <body>
           <Main />
