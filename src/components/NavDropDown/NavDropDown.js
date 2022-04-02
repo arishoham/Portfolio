@@ -4,8 +4,8 @@ export const DropDownContainer = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
-  right: -25%;
-  top: 40px;
+  right: 1rem;
+  top: 80px;
   width: 280px;
   background-color: #fff;
   border-radius: 8px;
@@ -19,11 +19,11 @@ export const DropDownContainer = styled.div`
   transform-origin: top;
   transform: ${({ active }) => active ? 'scaleY(1)' : 'scaleY(.3)'};
 
-  @media ${(props) => props.theme.breakpoints.md} {
+  /* @media ${(props) => props.theme.breakpoints.md} {
     top: 32px;
-  }
-  @media ${(props) => props.theme.breakpoints.sm} {
-    top: 24px;
+  } */
+  @media ${(props) => props.theme.breakpoints.xs} {
+    right: 0;
   }
 `
 export const DropDownItem = styled.a`
@@ -53,6 +53,11 @@ export const DropDownIcon = styled.div`
   width: 32px;
   height: 32px;
   margin-right: 16px;
+
+  & > svg {
+    color: #80F;
+    margin-top: .5rem;
+  }
 `
 
 export const DropDownTextContainer = styled.div`

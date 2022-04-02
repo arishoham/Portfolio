@@ -1,39 +1,59 @@
-import React from 'react'
-import { AiFillPhone, AiOutlineMail } from 'react-icons/ai'
-import { FaLocationArrow } from "react-icons/fa"
+import React from 'react';
+import { AiFillPhone } from 'react-icons/ai';
+import { FaHome } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
-import { DropDownContainer, DropDownIcon, DropDownItem, DropDownItemDesc, DropDownItemTitle, DropDownTextContainer } from './NavDropDown'
+import {
+  DropDownContainer,
+  DropDownIcon,
+  DropDownItem,
+  DropDownItemDesc,
+  DropDownItemTitle,
+  DropDownTextContainer,
+} from './NavDropDown';
 
 const NavDropDown = (props) => (
   <DropDownContainer active={props.isOpen}>
-    <DropDownItem href="#" target="_blank" rel="noreferrer">
+    <DropDownItem href="tel:617-308-2732">
       <DropDownIcon>
         <AiFillPhone />
       </DropDownIcon>
       <DropDownTextContainer>
         <DropDownItemTitle>Phone</DropDownItemTitle>
-        <DropDownItemDesc>Let's get together and have a chat?'</DropDownItemDesc>
+        <DropDownItemDesc>
+          Let&apos;s get together and have a chat!
+        </DropDownItemDesc>
       </DropDownTextContainer>
     </DropDownItem>
-    <DropDownItem href="#" target="_blank" rel="noreferrer">
+    <DropDownItem
+      href="mailto:arishoham@gmail.com"
+      target="_blank"
+      rel="noreferrer"
+    >
       <DropDownIcon>
-        <AiOutlineMail />
+        <MdEmail />
       </DropDownIcon>
       <DropDownTextContainer>
         <DropDownItemTitle>Email</DropDownItemTitle>
-        <DropDownItemDesc>If you want to talk jus send a message and I'll get back</DropDownItemDesc>
+        <DropDownItemDesc>
+          Send me a message, and let&apos;s chat!
+        </DropDownItemDesc>
       </DropDownTextContainer>
     </DropDownItem>
-    <DropDownItem href="#" target="_blank" rel="noreferrer">
+    <DropDownItem
+      href="https://www.google.com/maps/place/Boston,+MA/@42.3303116,-71.134589,11.76z/data=!4m5!3m4!1s0x89e3652d0d3d311b:0x787cbf240162e8a0!8m2!3d42.3600825!4d-71.0588801"
+      target="_blank"
+      rel="noreferrer"
+    >
       <DropDownIcon>
-        <FaLocationArrow />
+        <FaHome />
       </DropDownIcon>
       <DropDownTextContainer>
-        <DropDownItemTitle>Address</DropDownItemTitle>
-        <DropDownItemDesc>1405, Angelus Dr, Florissant. Mo</DropDownItemDesc>
+        <DropDownItemTitle>Home</DropDownItemTitle>
+        <DropDownItemDesc>Boston, MA</DropDownItemDesc>
       </DropDownTextContainer>
     </DropDownItem>
   </DropDownContainer>
 );
 
-export default NavDropDown
+export default NavDropDown;

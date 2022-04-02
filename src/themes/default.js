@@ -1,4 +1,4 @@
-export default {
+const theme = {
   // Temp fonts
   fonts: {
     title: "Open Sans, sans-serif",
@@ -22,3 +22,5 @@ export default {
     xl: 'screen and (max-width: 1280px)'
   },
 }
+
+export default theme
