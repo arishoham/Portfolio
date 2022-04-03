@@ -18,8 +18,8 @@ import {
 import Image from 'next/image';
 import NavDropDown from '../NavDropDown';
 
-const Header = () => {
-  const [isOpen, setisOpen] = useState(false);
+const Header = ({ setLocation }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const wrapperRef = useRef(null);
   useEffect(() => {
     function handleClickOutside(e) {
@@ -28,7 +28,7 @@ const Header = () => {
         e.target.id !== 'more-menu' &&
         !wrapperRef.current.contains(e.target)
       ) {
-        setisOpen(false);
+        setIsOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -81,11 +81,16 @@ const Header = () => {
         {/* <SocialIcons >
           <AiFillTwitterCircle size="3rem" />
         </SocialIcons> */}
-        <SocialIcons onClick={(e) => setisOpen((cur) => !cur)}>
+        <SocialIcons onClick={(e) => setIsOpen((cur) => !cur)}>
           <AiOutlineMore size="3rem" id="more-menu" />
         </SocialIcons>
       </Div3>
-      <NavDropDown ref={wrapperRef} isOpen={isOpen} />
+      <NavDropDown
+        ref={wrapperRef}
+        setIsOpen={setIsOpen}
+        isOpen={isOpen}
+        setLocation={setLocation}
+      />
     </Container>
   );
 };

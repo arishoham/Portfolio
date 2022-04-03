@@ -2,7 +2,6 @@ import React from 'react';
 import { AiFillPhone } from 'react-icons/ai';
 import { FaHome } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-
 import {
   DropDownContainer,
   DropDownIcon,
@@ -13,6 +12,11 @@ import {
 } from './NavDropDown';
 
 const NavDropDown = React.forwardRef(function NavDropDown(props, ref) {
+  const handleHomeClick = () => {
+    props.setIsOpen(false);
+    props.setLocation(true);
+  };
+
   return (
     <DropDownContainer active={props.isOpen} ref={ref}>
       <DropDownItem href="tel:617-308-2732">
@@ -41,11 +45,7 @@ const NavDropDown = React.forwardRef(function NavDropDown(props, ref) {
           </DropDownItemDesc>
         </DropDownTextContainer>
       </DropDownItem>
-      <DropDownItem
-        href="https://www.google.com/maps/place/Boston,+MA/@42.3303116,-71.134589,11.76z/data=!4m5!3m4!1s0x89e3652d0d3d311b:0x787cbf240162e8a0!8m2!3d42.3600825!4d-71.0588801"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <DropDownItem onClick={handleHomeClick}>
         <DropDownIcon>
           <FaHome />
         </DropDownIcon>
