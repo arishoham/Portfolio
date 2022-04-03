@@ -20,11 +20,8 @@ const Button = (props) => {
   };
   return (
     <ButtonBack>
-      {/* {props.children} */}
+      {props.children}
       <ButtonFront
-        // initial={{
-        //   background: `linear-gradient(${deg}deg, #13adc7 0%, #945dd6 100%)`,
-        // }}
         animate={{
           background: `linear-gradient(${deg}deg, #13adc7 0%, #945dd6 100%)`,
         }}
@@ -33,7 +30,6 @@ const Button = (props) => {
         }}
         onHoverStart={hoverIn}
         onHoverEnd={hoverOut}
-        // transition={{ duration: 0.4 }}
         alt={props.alt}
         onClick={props.onClick}
       >

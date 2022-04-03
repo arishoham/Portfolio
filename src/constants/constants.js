@@ -34,7 +34,7 @@ export const projects = [
     description:
       'Health app for monitoring nutrition intake by meal with interactive charts.',
     image: '/images/nutritionix.png',
-    tags: ['React', 'Redux', 'MongoDB', 'OAuth'],
+    tags: ['React', 'Redux', 'MongoDB', 'Jest'],
     source: 'https://github.com/Nutrition-IX/NutritionIX',
     // visit:
     id: 3,
