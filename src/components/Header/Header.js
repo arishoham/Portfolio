@@ -13,6 +13,7 @@ import {
   Div3,
   NavLink,
   SocialIcons,
+  NavLinkLi,
 } from './HeaderStyles';
 import Image from 'next/image';
 import NavDropDown from '../NavDropDown';
@@ -48,29 +49,27 @@ const Header = () => {
         </Link>
       </Div1>
       <Div2>
-        <li>
+        <NavLinkLi>
           <Link href="#projects" passHref>
             <NavLink>Projects</NavLink>
           </Link>
-        </li>
-        <li>
+        </NavLinkLi>
+        <NavLinkLi>
           <Link href="#skills" passHref>
             <NavLink>Skills</NavLink>
           </Link>
-        </li>
-        <li>
+        </NavLinkLi>
+        <NavLinkLi>
           <Link href="#about" passHref>
             <NavLink>About</NavLink>
           </Link>
-        </li>
-        <li>
+        </NavLinkLi>
+        <NavLinkLi>
           <NavLink href="/files/resume.pdf">Resume</NavLink>
-        </li>
+        </NavLinkLi>
       </Div2>
       <Div3>
-        <SocialIcons
-          href="https://github.com/arishoham"
-        >
+        <SocialIcons href="https://github.com/arishoham">
           <AiFillGithub size="3rem" />
         </SocialIcons>
         <SocialIcons href="https://www.linkedin.com/in/ari-shoham/">

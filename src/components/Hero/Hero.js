@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { Section, SectionText, SectionTitle, Link } from '../../styles/GlobalComponents';
+import {
+  Section,
+  SectionText,
+  SectionTitle,
+} from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
 import { LeftSection } from './HeroStyles';
 
@@ -12,12 +16,12 @@ const Hero = (props) => (
           Hey there,
         </SectionTitle>
         <SectionText>
-          Hey there, This is Ari Shoham. I am a fullstack web developer who has a passion for building things people use.
+          Hey there, This is Ari Shoham. I am a fullstack web developer who has
+          a passion for building things people use.
         </SectionText>
-        <Button onClick={(e) => {
-          e.preventDefault();
-          window.location.href = '/files/resume.pdf';
-        }}>My Resume</Button>
+        <Button onClick={(e) => (window.location.href = '/files/resume.pdf')}>
+          My Resume
+        </Button>
       </LeftSection>
     </Section>
   </>
