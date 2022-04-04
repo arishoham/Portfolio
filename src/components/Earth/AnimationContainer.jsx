@@ -40,7 +40,9 @@ function AnimationContainer(props) {
               onClick={(_) => setRot(true)}
               onTouchEnd={(_) => setRot(true)}
             >
-              <Earth rot={rot} {...props} />
+              <Suspense fallback={null}>
+                <Earth rot={rot} {...props} />
+              </Suspense>
             </Canvas>
           </Suspense>
         </CanvasWrapper>
