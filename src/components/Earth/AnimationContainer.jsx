@@ -12,10 +12,10 @@ export const CanvasWrapper = styled(motion.div)`
 `;
 
 function AnimationContainer(props) {
-  //Delay showing the map for .8 seconds
+  //Delay showing the map for .5 seconds
   const [show, setShow] = useState(false);
   useEffect(() => {
-    let timeout = setTimeout(() => setShow(true), 800);
+    let timeout = setTimeout(() => setShow(true), 500);
     return () => {
       clearTimeout(timeout);
     };
