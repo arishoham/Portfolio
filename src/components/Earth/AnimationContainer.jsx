@@ -39,7 +39,11 @@ function AnimationContainer(props) {
             <Canvas
               style={{ borderRadius: '3rem' }}
               onClick={(_) => setRot(true)}
+              onMouseDown={(_) => props.setLocation(false)}
               onTouchEnd={(_) => setRot(true)}
+              onTouchStart={(_) => props.setLocation(false)}
+              onScroll={(_) => props.setLocation(false)}
+              onWheel={(_) => props.setLocation(false)}
             >
               <Suspense fallback={null}>
                 <Earth rot={rot} {...props} />

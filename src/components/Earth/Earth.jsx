@@ -20,26 +20,33 @@ export function Earth({ rot, location, setLocation }) {
   const cloudsRef = useRef();
   const orbitRef = useRef();
 
+  function ZoomIn() {
+    const vec = new THREE.Vector3(0, 0, 10);
+    return useFrame(({ camera }) => camera.position.lerp(vec, 0.01));
+  }
+  function FindBoston() {
+    let vec;
+    if (window.innerWidth <= 640) {
+      vec = new THREE.Vector3(0.65, 1.85, 1.91);
+    } else {
+      vec = new THREE.Vector3(0.65, 2.03, 2.09);
+    }
+    return useFrame(({ camera }) => {
+      camera.position.lerp(vec, 0.05);
+    });
+  }
+
   useEffect(() => {
     if (location) {
-      if(window.innerWidth <= 640) {
-        orbitRef.current.object.position.y = 1.8583891134230555;
-        orbitRef.current.object.position.z = 1.9170047770646415;
-      } else {
-        orbitRef.current.object.position.y = 2.033004867564547;
-        orbitRef.current.object.position.z = 2.0981430799032514;
-      }
-      orbitRef.current.object.position.x = 0.6587735482106234;
       earthRef.current.rotation.x = 0;
       earthRef.current.rotation.y = 0;
       earthRef.current.rotation.z = 0;
       cloudsRef.current.rotation.x = 0;
       cloudsRef.current.rotation.y = 0;
       cloudsRef.current.rotation.z = 0;
-      rot.current = false
-      setLocation(false);
+      rot.current = false;
     }
-  }, [location, setLocation, rot]);
+  }, [location, rot]);
 
   useFrame(({ clock }) => {
     const elapsedTime = clock.getElapsedTime();
@@ -53,6 +60,7 @@ export function Earth({ rot, location, setLocation }) {
 
   return (
     <>
+      {location && <FindBoston />}
       <ambientLight intensity={0.1} />
       <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} />
       <mesh ref={cloudsRef} position={[0, 0, 0]} scale={2.5}>
@@ -65,11 +73,7 @@ export function Earth({ rot, location, setLocation }) {
           side={THREE.DoubleSide}
         />
       </mesh>
-      <mesh
-        ref={earthRef}
-        position={[0, 0, 0]}
-        scale={2.5}
-      >
+      <mesh ref={earthRef} position={[0, 0, 0]} scale={2.5}>
         <sphereGeometry args={[1, 32, 32]} />
         <meshPhongMaterial specularMap={specularMap} />
         <meshStandardMaterial
