@@ -12,13 +12,12 @@ import {
 } from './NavDropDown';
 
 const NavDropDown = React.forwardRef(function NavDropDown(props, ref) {
-  const handleHomeClick = () => {
-    props.setIsOpen(false);
-    props.setLocation(true);
-  };
-
   return (
-    <DropDownContainer active={props.isOpen} ref={ref}>
+    <DropDownContainer
+      active={props.isOpen}
+      ref={ref}
+      onClick={() => props.setIsOpen(false)}
+    >
       <DropDownItem href="tel:617-308-2732">
         <DropDownIcon>
           <AiFillPhone />
@@ -45,7 +44,7 @@ const NavDropDown = React.forwardRef(function NavDropDown(props, ref) {
           </DropDownItemDesc>
         </DropDownTextContainer>
       </DropDownItem>
-      <DropDownItem onClick={handleHomeClick}>
+      <DropDownItem onClick={() => props.setLocation(true)}>
         <DropDownIcon>
           <FaHome />
         </DropDownIcon>
