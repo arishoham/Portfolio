@@ -1,6 +1,6 @@
-import React, { useRef, useState, useEffect, useContext } from 'react';
-import { useFrame, useLoader, useThree } from '@react-three/fiber';
-import { OrbitControls, Stars } from '@react-three/drei';
+import React, { useRef, useEffect } from 'react';
+import { useFrame, useLoader } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 
