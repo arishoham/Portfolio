@@ -85,6 +85,7 @@ export function Earth({ rot, location, setLocation }) {
           enableRotate={true}
           zoomSpeed={0.4}
           minDistance={2.75}
+          maxDistance={7}
           rotateSpeed={0.2}
         />
       </mesh>
