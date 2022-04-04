@@ -55,14 +55,6 @@ export function Earth({ rot, location, setLocation }) {
     <>
       <ambientLight intensity={0.1} />
       <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} />
-      <Stars
-        radius={300}
-        depth={20}
-        count={5000}
-        factor={7}
-        saturation={0}
-        fade
-      />
       <mesh ref={cloudsRef} position={[0, 0, 0]} scale={2.5}>
         <sphereGeometry args={[1.005, 32, 32]} />
         <meshPhongMaterial
