@@ -68,7 +68,6 @@ export function Earth({ rot, location, setLocation }) {
       <mesh
         ref={earthRef}
         position={[0, 0, 0]}
-        // rotation={location ? [0.75, -0.33, 0] : [0, 0, 0]}
         scale={2.5}
       >
         <sphereGeometry args={[1, 32, 32]} />
@@ -86,7 +85,6 @@ export function Earth({ rot, location, setLocation }) {
           enableRotate={true}
           zoomSpeed={0.4}
           minDistance={2.75}
-          // panSpeed={0.5}
           rotateSpeed={0.2}
         />
       </mesh>
