@@ -1,34 +1,19 @@
+[![Logo](https://github.com/arishoham/Portfolio/blob/master/public/banner.png?raw=true)](https://www.arishoham.com/)
 
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/lordarcadius/portfolio/blob/master/LICENSE)
+# [My Personal Portfolio](https://www.arishoham.com/)
 
-  
-# Personal Portfolio
+Built in React and NextJS. With components from React-Three-Fiber, and animation from framer-motion.
 
-A portfolio built in React and NextJS. With components from React-Three-Fiber.
-
-
-![App Screenshot](https://i.ibb.co/jRRNMkH/Screenshot-from-2021-10-27-18-45-14.png)
+![App Screenshot](https://github.com/arishoham/Portfolio/blob/master/public/images/screenshot1.png?raw=true)
 
   
-## Demo
+## Live
 
-[Live Preview](https://www.vipuljha.com)
+https://www.arishoham.com/
 
-## Run Project 
+## Run Project
 
-Run this project with Yarn
-
-```bash 
-  yarn && yarn run dev
-```
-    
-## Deployment
-
-To deploy this project run
-
-```bash
-  yarn build
-```
+`npm i && npm run dev`
 
   
 ## Contributing
@@ -36,8 +21,6 @@ To deploy this project run
 Contributions are always welcome!
 
 Fork repo, make changes, test, create a pull request.
-
-Please make sure to maintain `authorship`.
 
   
 ## Credits
@@ -49,6 +32,6 @@ Please make sure to maintain `authorship`.
   
 ## License
 
-[MIT](https://github.com/lordarcadius/portfolio/blob/master/LICENSE)
+[MIT](https://github.com/arishoham/portfolio/blob/master/LICENSE)
 
   
