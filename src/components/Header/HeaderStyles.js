@@ -138,7 +138,7 @@ export const SocialIcons = (props) => {
     <SocialIconsStyled
       whileTap={{ scale: 0.9 }}
       whileHover={{ scale: 1.2 }}
-      transition={{ type: 'spring', duration: 0.07 }}
+      transition={{ duration: 0.07 }}
       {...props}
     >
       {props.children}
@@ -151,7 +151,6 @@ export const NavLinkLi = (props) => {
     <motion.li
       whileTap={{ scale: 0.9 }}
       whileHover={{ scale: 1.1 }}
-      transition={{ type: 'spring' }}
       {...props}
     >
       {props.children}

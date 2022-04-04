@@ -5,14 +5,13 @@ import * as THREE from 'three';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 
 export function Earth({ rot, location, setLocation }) {
-  const [colorMap, normalMap, specularMap, cloudsMap, nightMap] = useLoader(
+  const [colorMap, normalMap, specularMap, cloudsMap] = useLoader(
     TextureLoader,
     [
       'textures/8k_earth_daymap.jpg',
       'textures/8k_earth_normal_map.jpg',
       'textures/8k_earth_specular_map.jpg',
       'textures/8k_earth_clouds.jpg',
-      'textures/8k_earth_nightmap.jpg',
     ]
   );
 
@@ -20,10 +19,6 @@ export function Earth({ rot, location, setLocation }) {
   const cloudsRef = useRef();
   const orbitRef = useRef();
 
-  function ZoomIn() {
-    const vec = new THREE.Vector3(0, 0, 10);
-    return useFrame(({ camera }) => camera.position.lerp(vec, 0.01));
-  }
   function FindBoston() {
     let vec;
     if (window.innerWidth <= 640) {
