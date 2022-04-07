@@ -20,12 +20,12 @@ export const projects = [
     id: 1,
   },
   {
-    title: 'Git Good',
+    title: 'GoodWatch',
     description:
-      'Software engineering-focused learning and productivity tool that stores online resources under user-specified topic categories.',
-    image: '/images/gitgood.png',
-    tags: ['React', 'Express', 'PostgreSQL', 'OAuth'],
-    source: 'https://github.com/GitGoodOrg/GitGood',
+      'Online movie library platform for viewing movie information and ',
+    image: '/images/goodwatch.png',
+    tags: ['React', 'React Router', 'GraphQL', 'PostgreSQL'],
+    source: 'https://github.com/GoodWatch/GoodWatch',
     // visit: ,
     id: 2,
   },
@@ -34,7 +34,7 @@ export const projects = [
     description:
       'Health app for monitoring nutrition intake by meal with interactive charts.',
     image: '/images/nutritionix.png',
-    tags: ['React', 'Redux', 'MongoDB', 'Jest'],
+    tags: ['React', 'Redux', 'MongoDB', 'Jest', 'OAuth'],
     source: 'https://github.com/Nutrition-IX/NutritionIX',
     // visit:
     id: 3,
