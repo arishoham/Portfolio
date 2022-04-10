@@ -1,8 +1,24 @@
 import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiFillTwitterCircle,
+} from 'react-icons/ai';
 import { Link } from '../../styles/GlobalComponents';
 import { SocialIcons } from '../Header/HeaderStyles';
-import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTitle, Slogan, SocialContainer, SocialIconsContainer } from './FooterStyles';
+import NowPlaying from '../Spotify/NowPlaying';
+import {
+  CompanyContainer,
+  FooterWrapper,
+  LinkColumn,
+  LinkItem,
+  LinkList,
+  LinkTitle,
+  Slogan,
+  SocialContainer,
+  SocialIconsContainer,
+} from './FooterStyles';
 
 const Footer = () => {
   return (
@@ -12,6 +28,7 @@ const Footer = () => {
           <LinkTitle>Chat</LinkTitle>
           <LinkItem href="https://t.me/lordarcadius">Telegram</LinkItem>
         </LinkColumn> */}
+        <NowPlaying />
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
           <LinkItem href="mailto:arishoham@gmail.com">
@@ -21,7 +38,11 @@ const Footer = () => {
       </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Slogan>&copy; {(new Date()).getFullYear()} <Link href="https://www.arishoham.com">  Ari Shoham</Link> . All rights reserved.</Slogan>
+          <Slogan>
+            &copy; {new Date().getFullYear()}{' '}
+            <Link href="https://www.arishoham.com"> Ari Shoham</Link> . All
+            rights reserved.
+          </Slogan>
         </CompanyContainer>
         <SocialContainer>
           <SocialIcons href="https://github.com/arishoham">
@@ -38,7 +59,6 @@ const Footer = () => {
           </SocialIcons>
         </SocialContainer>
       </SocialIconsContainer>
-
     </FooterWrapper>
   );
 };
