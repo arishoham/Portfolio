@@ -9,7 +9,7 @@ const Button = (props) => {
   const intId = useRef(null);
   const hoverIn = () => {
     if (!intId.current) {
-      intId.current = setInterval((_) => setDeg((cur) => cur + 1), 10);
+      intId.current = setInterval((_) => requestAnimationFrame((_) => setDeg((cur) => cur + 1)), 10);
     }
   };
   const hoverOut = () => {
