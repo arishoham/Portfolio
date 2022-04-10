@@ -1,6 +1,4 @@
 import useSWR from 'swr';
-import { useEffect } from 'react';
-// import { animate } from 'motion';
 import { SpotifyLogo, LinkItemSpotify } from './NowPlayingStyles.js';
 import { LinkColumn, LinkTitle } from '../Footer/FooterStyles';
 
