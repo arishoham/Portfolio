@@ -25,7 +25,7 @@ export default function NowPlaying() {
               layout="fixed"
             />
           </div>
-          <span>
+          <span style={{lineHeight: 1.2}}>
             {data.title} {' - '}
             <span style={{ opacity: 0.75 }}>{data?.artist}</span>
           </span>
