@@ -6,7 +6,7 @@ import fetcher from '../../../lib/fetcher';
 import Image from 'next/image';
 
 export default function NowPlaying() {
-  const { data } = useSWR('/api/now-playing', fetcher);
+  const { data } = useSWR('/api/now-playing', fetcher, { refreshInterval: 30000 });
   return (
     <LinkColumn>
       <LinkTitle>Now Playing</LinkTitle>
