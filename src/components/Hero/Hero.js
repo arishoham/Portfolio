@@ -6,7 +6,7 @@ import {
   SectionTitle,
 } from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
-import { LeftSection } from './HeroStyles';
+import { LeftSection, Headshot } from './HeroStyles';
 import { AnimateUpWrapper } from './HeroSectionComponents';
 
 const Hero = (props) => (
@@ -17,10 +17,26 @@ const Hero = (props) => (
           Hey there,
         </SectionTitle>
       </AnimateUpWrapper>
-      <AnimateUpWrapper delay={0.2}>
-        <SectionText>
-          Hey there, This is Ari Shoham. I am a fullstack web developer who has
-          a passion for building things people use.
+      <AnimateUpWrapper
+        delay={0.2}
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '150px 1fr',
+          gap: '15px',
+          alignItems: 'center',
+          paddingBottom: '20px',
+        }}
+      >
+        <Headshot
+          src="/images/headshot.png"
+          height="150px"
+          width="150px"
+          alt=""
+          layout="fixed"
+        />
+        <SectionText style={{ paddingBottom: 0 }}>
+          I&apos;m Ari Shoham, a fullstack web developer who has a passion for
+          solving problems and building things people use.
         </SectionText>
       </AnimateUpWrapper>
       <AnimateUpWrapper delay={0.4}>

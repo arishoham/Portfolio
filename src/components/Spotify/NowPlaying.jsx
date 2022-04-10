@@ -26,8 +26,8 @@ export default function NowPlaying() {
             />
           </div>
           <span>
-            {data.title} {' - '}{' '}
-            <span style={{ fontStyle: 'italic' }}>{data?.artist}</span>
+            {data.title} {' - '}
+            <span style={{ opacity: 0.75 }}>{data?.artist}</span>
           </span>
         </LinkItemSpotify>
       ) : (
