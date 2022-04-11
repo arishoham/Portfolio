@@ -35,7 +35,7 @@ const Hero = (props) => (
           layout="fixed"
         />
         <SectionText style={{ paddingBottom: 0 }}>
-          I&apos;m Ari Shoham, a fullstack web developer who has a passion for
+          I&apos;m Ari Shoham, a full stack web developer who has a passion for
           solving problems and building things people use.
         </SectionText>
       </AnimateUpWrapper>

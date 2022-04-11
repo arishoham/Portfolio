@@ -29,7 +29,7 @@ export default class MyDocument extends Document {
   }
   render() {
     const desc =
-      'Hey there, This is Ari Shoham. I am a fullstack web developer who has a passion for building things people use.';
+      'Hey there, This is Ari Shoham. I am a full stack web developer who has a passion for building things people use.';
     return (
       <Html lang="en-GB">
         <Head>
@@ -39,20 +39,20 @@ export default class MyDocument extends Document {
           />
           <meta
             name="title"
-            content="Ari Shoham | Fullstack Software Engineer"
+            content="Ari Shoham | Full Stack Software Engineer"
           />
           <meta name="description" content={desc} />
           <meta property="og:type" content="website" />
           <meta
             property="og:title"
-            content="Ari Shoham | Fullstack Software Engineer"
+            content="Ari Shoham | Full Stack Software Engineer"
           />
           <meta property="og:description" content={desc} />
           <meta property="og:image" content="/banner.png" />
           <meta property="twitter:card" content="summary_large_image" />
           <meta
             property="twitter:title"
-            content="Ari Shoham | Fullstack Software Engineer"
+            content="Ari Shoham | Full Stack Software Engineer"
           />
           <meta property="twitter:description" content={desc} />
           <meta property="twitter:image" content="/banner.png" />
