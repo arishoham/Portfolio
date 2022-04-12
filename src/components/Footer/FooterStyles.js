@@ -21,11 +21,10 @@ export const LinkItem = styled.a`
 	margin-bottom: 16px;
 	transition: .3s ease;
 	position: relative;
-	left: 0;
 
 	&:hover {
 		color: #fff;
-		left: 6px;
+    transform: translateX(6px)
 	}
 
 	@media ${props => props.theme.breakpoints.md} {
