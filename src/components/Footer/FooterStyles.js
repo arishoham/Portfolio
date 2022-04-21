@@ -115,7 +115,7 @@ export const SocialContainer = styled.div`
 export const LinkList = styled.ul`
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: grid;
-	grid-template-columns: repeat(2, minmax(200px, 300px));
+	grid-template-columns: repeat(2,minmax(100px, 300px));
 	gap: 40px;
   padding: 40px 0 28px;
 
