@@ -22,7 +22,7 @@ export const projects = [
   {
     title: 'GoodWatch',
     description:
-      'Online movie library platform for viewing and storing movie information',
+      'Online movie platform for viewing and storing movie information.',
     image: '/images/GoodWatchBanner.png',
     tags: ['React', 'React Router', 'GraphQL', 'PostgreSQL'],
     source: 'https://github.com/GoodWatch/GoodWatch',
