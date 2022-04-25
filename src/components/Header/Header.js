@@ -1,11 +1,16 @@
 import Link from 'next/link';
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
+// import React, { useRef, useState, useEffect } from 'react';
 import {
   AiFillGithub,
   AiFillInstagram,
   AiFillLinkedin,
   AiOutlineMore,
+  AiTwotoneMail,
+  AiFillHome,
 } from 'react-icons/ai';
+import { MdEmail } from 'react-icons/md';
+import { FaHome } from 'react-icons/fa';
 import {
   Container,
   Div1,
@@ -16,26 +21,27 @@ import {
   NavLinkLi,
 } from './HeaderStyles';
 import Image from 'next/image';
-import NavDropDown from '../NavDropDown';
+// import NavDropDown from '../NavDropDown';
 
 const Header = ({ setLocation }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const wrapperRef = useRef(null);
-  useEffect(() => {
-    function handleClickOutside(e) {
-      if (
-        wrapperRef.current &&
-        e.target.id !== 'more-menu' &&
-        !wrapperRef.current.contains(e.target)
-      ) {
-        setIsOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [wrapperRef]);
+  // Used for dropdown
+  // const [isOpen, setIsOpen] = useState(false);
+  // const wrapperRef = useRef(null);
+  // useEffect(() => {
+  //   function handleClickOutside(e) {
+  //     if (
+  //       wrapperRef.current &&
+  //       e.target.id !== 'more-menu' &&
+  //       !wrapperRef.current.contains(e.target)
+  //     ) {
+  //       setIsOpen(false);
+  //     }
+  //   }
+  //   document.addEventListener('mousedown', handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener('mousedown', handleClickOutside);
+  //   };
+  // }, [wrapperRef]);
   return (
     <Container>
       <Div1>
@@ -75,22 +81,29 @@ const Header = ({ setLocation }) => {
         <SocialIcons href="https://www.linkedin.com/in/ari-shoham/">
           <AiFillLinkedin size="3rem" />
         </SocialIcons>
-        <SocialIcons href="https://www.instagram.com/arishoham">
+        {/* <SocialIcons href="https://www.instagram.com/arishoham">
           <AiFillInstagram size="3rem" />
-        </SocialIcons>
-        {/* <SocialIcons >
-          <AiFillTwitterCircle size="3rem" />
         </SocialIcons> */}
-        <SocialIcons onClick={(e) => setIsOpen((cur) => !cur)}>
-          <AiOutlineMore size="3rem" id="more-menu" />
+        <SocialIcons
+          href="mailto:arishoham@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <MdEmail size="3rem" />
         </SocialIcons>
+        <SocialIcons onClick={() => setLocation(true)}>
+          <AiFillHome size="3rem" />
+        </SocialIcons>
+        {/* <SocialIcons onClick={(e) => setIsOpen((cur) => !cur)}>
+          <AiOutlineMore size="3rem" id="more-menu" />
+        </SocialIcons> */}
       </Div3>
-      <NavDropDown
+      {/* <NavDropDown
         ref={wrapperRef}
         setIsOpen={setIsOpen}
         isOpen={isOpen}
         setLocation={setLocation}
-      />
+      /> */}
     </Container>
   );
 };
