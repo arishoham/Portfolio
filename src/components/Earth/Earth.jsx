@@ -39,20 +39,16 @@ export function Earth({ rot, location }) {
   }
 
   useEffect(() => {
-    if (location) {
-      earthRef.current.rotation.x = 0;
-      earthRef.current.rotation.y = 0;
-      earthRef.current.rotation.z = 0;
-      cloudsRef.current.rotation.x = 0;
-      cloudsRef.current.rotation.y = 0;
-      cloudsRef.current.rotation.z = 0;
-      rot.current = false;
-    }
+    if (!location) return;
+
+    earthRef.current.rotation.y = 0;
+    cloudsRef.current.rotation.y = 0;
+    rot.current = false;
   }, [location, rot]);
 
   useFrame(({ clock }) => {
-    const elapsedTime = clock.getElapsedTime();
     if (rot.current) {
+      const elapsedTime = clock.getElapsedTime();
       earthRef.current.rotation.y = elapsedTime / 6;
       cloudsRef.current.rotation.y = elapsedTime / 6;
     } else {
