@@ -4,7 +4,7 @@ import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 
-export function Earth({ rot, location, setLocation }) {
+export function Earth({ rot, location }) {
   const [colorMap, normalMap, specularMap, cloudsMap] = useLoader(
     TextureLoader,
     [
@@ -19,13 +19,11 @@ export function Earth({ rot, location, setLocation }) {
   const cloudsRef = useRef();
   const orbitRef = useRef();
 
-  function FindBoston() {
-    let vec;
-    if (window.innerWidth <= 640) {
-      vec = new THREE.Vector3(0.65, 1.85, 1.91);
-    } else {
-      vec = new THREE.Vector3(0.65, 2.03, 2.09);
-    }
+  function FindHome() {
+    const vec =
+      window.innerWidth <= 640
+        ? new THREE.Vector3(-0.33, 1.39, 2.34)  // Boston: (0.65, 1.85, 1.91)
+        : new THREE.Vector3(-0.34, 1.49, 2.56); // Boston: (0.65, 2.03, 2.09)
     return useFrame(({ camera }) => {
       camera.position.lerp(vec, 0.05);
     });
@@ -55,7 +53,7 @@ export function Earth({ rot, location, setLocation }) {
 
   return (
     <>
-      {location && <FindBoston />}
+      {location && <FindHome />}
       <ambientLight intensity={0.1} />
       <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} />
       <mesh ref={cloudsRef} position={[0, 0, 0]} scale={2.5}>
