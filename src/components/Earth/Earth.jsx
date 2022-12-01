@@ -20,10 +20,19 @@ export function Earth({ rot, location }) {
   const orbitRef = useRef();
 
   function FindHome() {
-    const vec =
-      window.innerWidth <= 640
-        ? new THREE.Vector3(-0.33, 1.39, 2.34)  // Boston: (0.65, 1.85, 1.91)
-        : new THREE.Vector3(-0.34, 1.49, 2.56); // Boston: (0.65, 2.03, 2.09)
+    let vec;
+    if (location === 'Austin') {
+      vec =
+        window.innerWidth <= 640
+          ? new THREE.Vector3(-0.33, 1.39, 2.34)
+          : new THREE.Vector3(-0.34, 1.49, 2.56);
+    }
+    if (location === 'Boston') {
+      vec =
+        window.innerWidth <= 640
+          ? new THREE.Vector3(0.65, 1.85, 1.91)
+          : new THREE.Vector3(0.65, 2.03, 2.09);
+    }
     return useFrame(({ camera }) => {
       camera.position.lerp(vec, 0.05);
     });

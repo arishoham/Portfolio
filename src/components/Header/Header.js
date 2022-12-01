@@ -91,7 +91,10 @@ const Header = ({ setLocation }) => {
         >
           <MdEmail size="3rem" />
         </SocialIcons>
-        <SocialIcons onClick={() => setLocation(true)}>
+        <SocialIcons
+          onClick={() => setLocation('Austin')}
+          onDoubleClick={() => setLocation('Boston')}
+        >
           <AiFillHome size="3rem" />
         </SocialIcons>
         {/* <SocialIcons onClick={(e) => setIsOpen((cur) => !cur)}>

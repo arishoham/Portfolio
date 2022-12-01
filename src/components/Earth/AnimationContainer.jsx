@@ -23,44 +23,39 @@ function AnimationContainer(props) {
   }, []);
 
   const rot = useRef(true);
-  const setRot = (value) => {
-    rot.current = value;
-  };
+  const startRotation = () => (rot.current = true);
+  const unsetLocation = () => props.setLocation(false);
 
   return (
-    <>
-      {show && (
-        <CanvasWrapper
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+    <CanvasWrapper
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <Suspense fallback={null}>
+        <Canvas
+          style={{ borderRadius: '3rem' }}
+          onClick={startRotation}
+          onMouseDown={unsetLocation}
+          onTouchEnd={startRotation}
+          onTouchStart={unsetLocation}
+          onScroll={unsetLocation}
+          onWheel={unsetLocation}
         >
           <Suspense fallback={null}>
-            <Canvas
-              style={{ borderRadius: '3rem' }}
-              onClick={(_) => setRot(true)}
-              onMouseDown={(_) => props.setLocation(false)}
-              onTouchEnd={(_) => setRot(true)}
-              onTouchStart={(_) => props.setLocation(false)}
-              onScroll={(_) => props.setLocation(false)}
-              onWheel={(_) => props.setLocation(false)}
-            >
-              <Suspense fallback={null}>
-                <Earth rot={rot} {...props} />
-              </Suspense>
-              <Stars
-                radius={300}
-                depth={20}
-                count={5000}
-                factor={7}
-                saturation={0}
-                fade
-              />
-            </Canvas>
+            <Earth rot={rot} {...props} />
           </Suspense>
-        </CanvasWrapper>
-      )}
-    </>
+          <Stars
+            radius={300}
+            depth={20}
+            count={5000}
+            factor={7}
+            saturation={0}
+            fade
+          />
+        </Canvas>
+      </Suspense>
+    </CanvasWrapper>
   );
 }
 
