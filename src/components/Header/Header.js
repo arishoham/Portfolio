@@ -22,6 +22,7 @@ import {
 } from './HeaderStyles';
 import Image from 'next/image';
 // import NavDropDown from '../NavDropDown';
+import { useClickPreventionOnDoubleClick } from '../../hooks/useClickPreventionOnDoubleClick';
 
 const Header = ({ setLocation }) => {
   // Used for dropdown
@@ -42,6 +43,12 @@ const Header = ({ setLocation }) => {
   //     document.removeEventListener('mousedown', handleClickOutside);
   //   };
   // }, [wrapperRef]);
+
+  const [handleClick, handleDoubleClick] = useClickPreventionOnDoubleClick(
+    () => setLocation('Austin'),
+    () => setLocation('Boston')
+  );
+
   return (
     <Container>
       <Div1>
@@ -92,8 +99,8 @@ const Header = ({ setLocation }) => {
           <MdEmail size="3rem" />
         </SocialIcons>
         <SocialIcons
-          onClick={() => setLocation('Austin')}
-          onDoubleClick={() => setLocation('Boston')}
+          onClick={handleClick}
+          onDoubleClick={handleDoubleClick}
         >
           <AiFillHome size="3rem" />
         </SocialIcons>
